@@ -1,3 +1,4 @@
+package com;
 import java.util.*;
 public class B_8958 {
 
@@ -25,6 +26,7 @@ public class B_8958 {
 			System.out.println(sum);
 			sum=0;
 		}
+		sc.close();
 	}
 
 }

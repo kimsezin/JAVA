@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_10818",
+            "request": "launch",
+            "mainClass": "com.B_10818",
+            "projectName": "Backjoon"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_1546",
+            "request": "launch",
+            "mainClass": "com.B_1546",
+            "projectName": "Backjoon"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_2562",
+            "request": "launch",
+            "mainClass": "com.B_2562",
+            "projectName": "Backjoon"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_3052",
+            "request": "launch",
+            "mainClass": "com.B_3052",
+            "projectName": "Backjoon"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_4344",
+            "request": "launch",
+            "mainClass": "com.B_4344",
+            "projectName": "Backjoon"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_8958",
+            "request": "launch",
+            "mainClass": "com.B_8958",
+            "projectName": "Backjoon"
+        }
+    ]
+}

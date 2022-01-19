@@ -1,3 +1,4 @@
+package com;
 import java.util.*;
 public class B_3052 {
 
@@ -22,6 +23,7 @@ public class B_3052 {
 			}
 		}
 		System.out.println(cnt);
+		sc.close();
 	}
 
 }

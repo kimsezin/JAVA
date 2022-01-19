@@ -1,3 +1,4 @@
+package com;
 import java.util.*;
 public class B_1546 {
 
@@ -21,7 +22,7 @@ public class B_1546 {
 			sum+=score[i];
 		}
 		System.out.println(sum/num);
-		
+		sc.close();
 	}
 
 }

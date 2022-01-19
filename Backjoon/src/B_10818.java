@@ -1,3 +1,4 @@
+package com;
 import java.util.Scanner;
 public class B_10818 {
 
@@ -19,7 +20,7 @@ public class B_10818 {
 	
 	    
 	    System.out.println(min+" "+max);
-		
+		sc.close();
 }
 	
 }

@@ -1,3 +1,4 @@
+package com;
 import java.util.*;
 public class B_4344 {
 
@@ -28,6 +29,7 @@ public class B_4344 {
 			}
 			
 			System.out.println(String.format("%.3f%%", cnt/(double)num*100));
+			sc.close();
 		
 		}
 		

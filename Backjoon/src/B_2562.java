@@ -1,3 +1,4 @@
+package com;
 import java.util.Scanner;
 public class B_2562 {
 
@@ -16,6 +17,7 @@ public class B_2562 {
 		}
 		System.out.println(max);
 		System.out.println(max_idx+1);
+		sc.close();
 	}
 
 }
