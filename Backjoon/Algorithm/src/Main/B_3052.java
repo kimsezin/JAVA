@@ -1,4 +1,4 @@
-package com;
+package Main;
 import java.util.*;
 public class B_3052 {
 

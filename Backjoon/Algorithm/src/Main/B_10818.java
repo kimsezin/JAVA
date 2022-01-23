@@ -1,4 +1,4 @@
-package com;
+package Main;
 import java.util.Scanner;
 public class B_10818 {
 
