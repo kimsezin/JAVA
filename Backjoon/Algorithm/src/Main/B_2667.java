@@ -1,8 +1,8 @@
 package Main;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.*;
+import java.io.*;
+
 public class B_2667 {
 	static int[][] map = new int[25][25];
 	static boolean[][] visited = new boolean[25][25];
