@@ -29,7 +29,8 @@ public class B_2667 {
 		}
 	}
 	public static void main(String[] args) throws FileNotFoundException{
-		
+		 String path = B_2667.class.getResource("").getPath()+"input.txt";
+		 System.setIn(new FileInputStream(path));
 		 Scanner sc = new Scanner(System.in);
 		 
 		 N = sc.nextInt();
