@@ -10,7 +10,7 @@ public class B_2231 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int target = Integer.parseInt(br.readLine());
-		for(int i=197;i<target;i++)
+		for(int i=1;i<target;i++)
 		{
 			int temp= i;
 			int sum=i;

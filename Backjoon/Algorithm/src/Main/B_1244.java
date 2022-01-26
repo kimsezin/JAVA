@@ -62,9 +62,10 @@ public class B_1244 {
 			}
 		}
 		
-		for(int i=0; i<=N; i++){ 
-			if(i%19 == 0 && i!=0) printf("%d\n", switchState[i]);
-			else printf("%d ", swit[i]);
+		for(int i=0; i<N; i++) {
+			System.out.print(switchState[i] + " ");
+			if((i+1) % 20 == 0)
+				System.out.println();
 		}
 
 	}
