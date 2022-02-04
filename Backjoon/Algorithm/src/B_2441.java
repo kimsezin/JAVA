@@ -1,8 +1,8 @@
-package Main;
+
 
 import java.util.Scanner;
 
-public class B_2442 {
+public class B_2441 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,11 +11,11 @@ public class B_2442 {
 		int N = sc.nextInt();
 		for(int i=0;i<N;i++)
 		{
-			for(int j=0;j<N-i-1;j++)
+			for(int j=0;j<i;j++)
 			{
 				System.out.print(" ");
 			}
-			for(int j=0;j<(i*2+1);j++)
+			for(int j=0;j<N-i;j++)
 			{
 				System.out.print("*");
 			}
