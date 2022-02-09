@@ -8,7 +8,7 @@ public class B_13305 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
-		
+		boolean visited[] =  new boolean[N];
 		int edge[] = new int[N-1];
 		int vertex[] = new int[N];
 		
@@ -22,22 +22,32 @@ public class B_13305 {
 		{
 			vertex[i] = Integer.parseInt(st.nextToken());
 		}
-		int price=1000000001;
 		int distance=0;
-		int temp=0;
 		int result=0;
+		
 		for(int i=0;i<N;i++)
 		{
-			distance+=edge[i];
-			if(vertex[i] < price)
+			if(visited[i]==false)
 			{
-				for(int j=temp;j<=i;j++)
+				visited[i]=true;
+				for(int j=i+1;j<N;j++)
 				{
-					result = distance*price;
+					if(vertex[i] >= vertex[j])
+					{
+						distance += edge[j-1];
+						result += vertex[i]*distance;
+						distance=0;
+						break;
+					}
+					else
+					{
+						distance += edge[j-i];
+						visited[j]=true;
+					}
 				}
-				temp=i;
 			}
 		}
+		System.out.println(result);
 	}
 
 }

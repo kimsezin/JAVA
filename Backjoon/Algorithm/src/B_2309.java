@@ -15,7 +15,7 @@ public class B_2309 {
 			height[i]=Integer.parseInt(br.readLine());
 		}
 		Arrays.sort(height);
-		dfs(0,0);
+		dfs(-1,0);
 	}
 	
 	public static void dfs(int height_t, int cnt)
@@ -31,7 +31,7 @@ public class B_2309 {
 			return;
 		}
 		
-		for(int i=cnt;i<9;i++)
+		for(int i=cnt+1;i<9;i++)
 		{
 			result[cnt]=height[i];
 			dfs(height_t+height[i], cnt+1);
