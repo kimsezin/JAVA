@@ -4,13 +4,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 import java.util.StringTokenizer;
 
-
-
 public class B_1931 {
-
 	static public class time
 	{
 		int start;
@@ -20,14 +16,6 @@ public class B_1931 {
 		{
 			this.start = start;
 			this.end = end;
-		}
-		public int getStart()
-		{
-			return start;
-		}
-		public int getEnd()
-		{
-			return end;
 		}
 	}
 	
@@ -49,16 +37,19 @@ public class B_1931 {
 			@Override
 			public int compare(time o1, time o2) {
 				// TODO Auto-generated method stub
+					if(o1.end==o2.end)
+						return o1.start-o2.start;
 					return o1.end - o2.end;
 			}
 		});
+		
 		int cnt=0;
 		int end_time=0;
 		for(int i=0;i<input.size();i++)
 		{
-			if(input.get(i).end >end_time)
+			if(input.get(i).end >= end_time)
 			{
-				if(input.get(i).start > end_time)
+				if(input.get(i).start >= end_time)
 				{
 					cnt++;
 					end_time = input.get(i).end;
