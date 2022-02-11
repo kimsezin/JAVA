@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_2011 {
+public class Solution_1861 {
 
 	static int map[][];
 	static int result;
