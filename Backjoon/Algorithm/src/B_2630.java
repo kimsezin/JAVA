@@ -21,6 +21,8 @@ public class B_2630 {
 			}
 		}
 		recur(0,0,N);
+		System.out.println(white_cnt);
+		System.out.println(blue_cnt);
  		
 	}
 
