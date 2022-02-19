@@ -39,8 +39,8 @@ public class B_3109 {
 	{
 		if(col==C-1)
 		{
-			check=true;
-			result++;
+			check=true; //가장 오른쪽 행에 닿은것을 체크
+			result++; //횟수 카운팅
 			return;
 		}	
 		
@@ -54,13 +54,14 @@ public class B_3109 {
 			{
 				if(map[nx][ny]=='.') // 도착한 칸이 .이고 이 전 행에서 들리지 않은 곳일때
 				{
-					map[nx][ny]='x';
-					recur(nx,ny);
-					if(check==true)
+					map[nx][ny]='x'; // 해당 칸 x로 만들어 다음 행에서 못쓰게하기
+					recur(nx,ny); // 재귀
+					if(check==true) //가장 오른쪽 행에 닿았을 때는 출발한 행에서 더이상 탐색할 필요 없으므로 return
 						return;
 				}
 			}
 		}
+		
 	
 	}
 }
