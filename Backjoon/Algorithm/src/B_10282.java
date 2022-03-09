@@ -10,11 +10,11 @@ public class B_10282 {
 
 	static class computer implements Comparable<computer>
 	{
-		int connect;
+		int computer;
 		int time;
-		public computer(int connect, int time) {
+		public computer(int computer, int time) {
 			super();
-			this.connect = connect;
+			this.computer = computer;
 			this.time = time;
 		}
 		
@@ -35,18 +35,9 @@ public class B_10282 {
 		{
 			StringTokenizer st = new StringTokenizer(br.readLine()," ");
 			n = Integer.parseInt(st.nextToken());
-			if(n==0)
-			{
-				System.out.println(0+" "+0);
-				return;
-			}
 			d = Integer.parseInt(st.nextToken());
-			if(d==0)
-			{
-				System.out.println(1+" "+0);
-				return;
-			}
 			c = Integer.parseInt(st.nextToken());
+			
 			list = new ArrayList<>();
 			for(int i=0;i<n;i++)
 				list.add(new ArrayList<computer>());
@@ -58,6 +49,7 @@ public class B_10282 {
 				int time = Integer.parseInt(st.nextToken());
 				
 				list.get(end).add(new computer(start,time));
+				//현재 나를 의존하고있는 컴퓨터를 저장해야하므로 end에 start를 넣어준다.
 			}
 			
 			visited = new boolean[10001];
@@ -67,6 +59,7 @@ public class B_10282 {
 			dijkstra(c-1);
 			int cnt=0;
 			int result=0;
+			
 			for(int i=0;i<n;i++)
 				if(visited[i]==true)
 					cnt++;
@@ -90,18 +83,18 @@ public class B_10282 {
 		while(!pq.isEmpty())
 		{
 			computer temp = pq.poll();
-			int current = temp.connect;
+			int current = temp.computer;
 			int time = temp.time;
 			
-			for(computer next : list.get(current))
+			for(computer next : list.get(current)) //current를 의지하고있는 컴퓨터를 탐색
 			{
-				if(visited[current]==true)
+				if(visited[current]==true) //current가 감염되어 있으면
 				{
-					if(distance[next.connect] > distance[current]+next.time)
+					if(distance[next.computer] > distance[current]+next.time)
 					{
-						distance[next.connect] = distance[current]+next.time;
-						pq.add(new computer(next.connect,distance[next.connect]));
-						visited[next.connect]=true;
+						distance[next.computer] = distance[current]+next.time;
+						pq.add(new computer(next.computer,distance[next.computer]));
+						visited[next.computer]=true;
 					}
 				}
 			}
