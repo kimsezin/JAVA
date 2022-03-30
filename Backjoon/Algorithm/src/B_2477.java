@@ -24,13 +24,19 @@ public class B_2477 {
 			
 			if(direction <3)
 			{
-				max_x = Math.max(max_x, distance);
-				max_x_idx = i;
+				if(max_x < distance)
+				{
+					max_x_idx=i;
+					max_x = distance;
+				}
 			}
 			else
 			{
-				max_y = Math.max(max_y, distance);
-				max_y_idx=i;
+				if(max_y < distance)
+				{
+					max_y_idx=i;
+					max_y = distance;
+				}
 			}
 		}
 		int minus_x;
