@@ -35,14 +35,14 @@ public class B_2644 {
 	static void dfs(int start, int cnt, int end)
 	{
 		visited[start] = true;
-		if(start==end)
+		if(start==end) //end지점에 도착하면 횟수 return
 		{
 			System.out.println(cnt);
 			check=true;
 			return;
 		}
 		
-		for(int i=1;i<=N;i++)
+		for(int i=1;i<=N;i++)//start와 연결되어있는 모든 촌수 뒤져서 dfs
 		if(map[start][i]==1)
 			if(visited[i]==false)
 				dfs(i, cnt+1, end);

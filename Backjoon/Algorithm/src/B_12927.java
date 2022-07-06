@@ -10,7 +10,7 @@ public class B_12927 {
 		int cnt=0;
 		for(int i=0;i<temp.length;i++)
 		{
-			if(check(temp))
+			if(check(temp)) //하나라도 Y면 false
 			{
 				System.out.println(cnt);
 				return;

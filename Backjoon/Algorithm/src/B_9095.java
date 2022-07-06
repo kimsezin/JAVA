@@ -12,7 +12,7 @@ public class B_9095 {
 		for(int tc=1;tc<=T;tc++)
 		{
 			int N = Integer.parseInt(br.readLine());
-			int dp[] = new int[N+1];
+			int dp[] = new int[11];
 			
 			dp[0]=1;
 			dp[1]=2;

@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class B_10157 {
-	static int dx[] = {1,0,-1,0};
+	static int dx[] = {1,0,-1,0}; //하 우 상 좌
 	static int dy[] = {0,1,0,-1};
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,7 +32,7 @@ public class B_10157 {
 			if(x+dx[idx] < 0 || y+dy[idx] < 0 || x+dx[idx] > R-1 || y+dy[idx] > C-1  || map[x+dx[idx]][y+dy[idx]] != 0)
 			{
 				idx++;
-				idx%=4;
+				idx%=4; //범위 초과시 4로 나눈 나머지
 			}
 			x = x+dx[idx];
 			y = y+dy[idx];

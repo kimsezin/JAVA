@@ -33,7 +33,6 @@ public class B_1368 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine()); //논 개수
 		parent = new int[N+1]; //논마다 연결됨을 표시하기위한 parent
-		map = new int[N+1][N+1]; //다른 논과 연결됨.
 		pq = new PriorityQueue<>(); //cost가 낮은것부터 찾기위한 pq
 		int cost;
 		
@@ -92,8 +91,6 @@ public class B_1368 {
 			parent[start] = end;
 		else
 			parent[end] = start;
-		
-		
 	}
 
 	

@@ -40,26 +40,29 @@ public class B_1261 {
 		}
 		
 		PriorityQueue<location> pq = new PriorityQueue<>();
-		boolean visited[][] = new boolean[N][M];
 		int distance[][] = new int[N][M];
+		///거리 큰 수로 채워놓기
 		for(int i=0;i<N;i++)
 			Arrays.fill(distance[i], 987654321);
+		
+		
 		distance[0][0]=0;
 		pq.add(new location(0,0,0));
-		visited[0][0]=true;
+		
 		while(!pq.isEmpty())
 		{
 			location temp = pq.poll();
 			int x = temp.x;
 			int y = temp.y;
 			int dis = temp.value;
-			visited[x][y]=true;
 			for(int i=0;i<4;i++)
 			{
 				int nx = x+dx[i];
 				int ny = y+dy[i];
-				if(nx >= 0 && ny >= 0 && nx < N && ny < M && visited[nx][ny]==false)
+				if(nx >= 0 && ny >= 0 && nx < N && ny < M )
 				{
+					//지금까지 nx,ny로 간 거리보다 현재에서 nx,ny를 거치는것이 더 짧은 경우
+					//distance[nx][ny]에 지금까지의 최소값이 들어가게 됨
 					if(distance[nx][ny] > dis + map[nx][ny])
 					{
 						distance[nx][ny] = dis+map[nx][ny];

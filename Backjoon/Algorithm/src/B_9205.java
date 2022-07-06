@@ -32,10 +32,11 @@ public class B_9205 {
 			StringTokenizer st = new StringTokenizer(br.readLine()," ");
 			homeX = Integer.parseInt(st.nextToken());
 			homeY = Integer.parseInt(st.nextToken());
+			//집 좌표
 			
 			visited=new boolean[n];
 			cu = new ArrayList<>();
-			
+			//편의점 좌표 넣을 리스트
 			for(int j=0;j<n;j++)
 			{
 				st = new StringTokenizer(br.readLine());
@@ -59,23 +60,23 @@ public class B_9205 {
 	public static boolean bfs()
 	{
 		Queue<location> q = new LinkedList<>();
-		q.offer(new location(homeX,homeY));
+		q.offer(new location(homeX,homeY)); //출발지점인 집
 		
 		while(!q.isEmpty())
 		{
 			location temp = q.poll();
 			
-			if(Math.abs(temp.x - targetX) + Math.abs(temp.y-targetY) <= 1000)
+			if(Math.abs(temp.x - targetX) + Math.abs(temp.y-targetY) <= 1000) //맥주 한박스로 갈수있는 거리에 target이 있을 시 return
 				return true;
 			
 			for(int i=0;i<n;i++)
 			{
 				if(visited[i]==false)
 				{
-					if(Math.abs(temp.x - cu.get(i).x) + Math.abs(temp.y-cu.get(i).y) <= 1000)
+					if(Math.abs(temp.x - cu.get(i).x) + Math.abs(temp.y-cu.get(i).y) <= 1000)//맥주 한박스 이내로 갈 수 있는 거리 다 찾아서 bfs반복
 					{
 						visited[i]=true;
-						q.offer(new location(cu.get(i).x, cu.get(i).y));
+						q.offer(new location(cu.get(i).x, cu.get(i).y));//해당 편의점을 출발지로 설정하고 다시 bfs
 					}
 				}
 			}
